@@ -1,0 +1,18 @@
+cluster_identifier: "cluster_name"
+engine_version: "8.0.mysql_aurora.3.05.2"
+instance_class: "db.t4g.large"
+instance_count: 2
+db_subnet_group_name: "sg_name"
+vpc_security_group_ids:
+  - "sg-##############"
+publicly_accessible: false
+kms_key_id: "kms_id"
+multi_az: true
+backup_retention_period: 35
+preferred_backup_window: "23:00-23:59"
+deletion_protection: true
+final_snapshot_identifier: "final-snapshot-aurora-cluster"
+copy_tags_to_snapshot: true
+
+tags:
+  environment: "dev"
